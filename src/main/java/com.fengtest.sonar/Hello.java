@@ -10,11 +10,4 @@ public class Hello {
 
     }
 
-    public String sayHello2(String name){
-        if("feng".equals(name))
-            return "Hello "+ name;
-
-        return "dont konw u!";
-
-    }
 }
