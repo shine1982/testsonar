@@ -9,10 +9,11 @@ pipeline {
         }
 
         stage('SonarQube analysis') {
-
-            withSonarQubeEnv('sonar local server') {
-              // requires SonarQube Scanner for Maven 3.2+
-              sh 'mvn sonar:sonar'
+            steps {
+                withSonarQubeEnv('sonar local server') {
+                  // requires SonarQube Scanner for Maven 3.2+
+                  sh 'mvn sonar:sonar'
+                }
             }
           }
     }
