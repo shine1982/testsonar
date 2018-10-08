@@ -2,6 +2,12 @@ pipeline {
     agent any
 
     stages {
+
+        stage('SCM') {
+                steps {
+                    git url: 'https://github.com/shine1982/testsonar.git'
+                }
+         }
         stage('build') {
             steps {
                 sh 'mvn clean install'
