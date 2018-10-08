@@ -23,6 +23,7 @@ pipeline {
                     // true = set pipeline to UNSTABLE, false = don't
                     // Requires SonarQube Scanner for Jenkins 2.7+
                     waitForQualityGate abortPipeline: true
+
                 }
             }
         }
