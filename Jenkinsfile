@@ -16,7 +16,7 @@ pipeline {
 
         stage('SonarQube analysis') {
             steps {
-                withSonarQubeEnv('sonar local server') {
+                withSonarQubeEnv('sonarqube') {
                   // requires SonarQube Scanner for Maven 3.2+
                   sh 'mvn sonar:sonar'
                 }
